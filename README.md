@@ -9,7 +9,7 @@ This is an original fire script developed by JnKTechstuff(Jake K #2217) with som
 This script was developed for Paradox Gaming. A public RP community co-founded by myself and E1Gamer.
 
 If you are looking for a server give ours a try:
-[Paradox Disocrd](http://discord.paradoxgaming.co/)
+[Paradox Gaming](https://www.paradoxgaming.co/)
 
 ## Using
 
