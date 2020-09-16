@@ -1,5 +1,5 @@
 # Paradox Fire Dispatch - The premiere fire system
-This is an original fire script developed by JnKTechstuff(Jake K #2217) with some code from Albo1125's previous fire script. The code has been commented and creadited and prior permission granted from Albo1125.
+This is an original fire script developed by JnKTechstuff(Jake K #2217) with some code from Albo1125's previous fire script. The code has been commented and credited and prior permission granted from Albo1125.
 
 
 ## Primary goals for this project
