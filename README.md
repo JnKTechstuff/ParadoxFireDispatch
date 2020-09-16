@@ -45,6 +45,12 @@ shared_script '@extendedmode/imports.lua'
 
 - A working brain and if you want jobs then Extendedmode (works out of the box) or some other framework
 
+## Planned Features:
+
+- If no random fires in `x` amount of time start a fire from a defined table of coords
+- Multiple fires
+- Fire spread
+
 ## Contributing
 
 1) Fork this repository to your own account, then check out the dev branch.
