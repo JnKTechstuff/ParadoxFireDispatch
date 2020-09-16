@@ -29,6 +29,7 @@ shared_script '@extendedmode/imports.lua'
 - [Paradox Gaming](http://discord.paradoxgaming.co/)
 - [Extendedmode Github](https://github.com/extendedmode/extendedmode)
 - [FiveM Native Reference](https://runtime.fivem.net/doc/reference.html)
+- [Albo1125's Fire Script](https://github.com/Albo1125/FireScript)
 - [FiveM Forum Post]() (Coming soon!)
 
 
