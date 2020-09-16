@@ -53,10 +53,10 @@ shared_script '@extendedmode/imports.lua'
 
 ## Contributing
 
-1) Fork this repository to your own account, then check out the dev branch.
+1) Fork this repository to your own account, then check out the "development" branch.
 2) Write your changes.
 3) Test your changes against your own server.
-4) Create a pull request against the "dev" branch.
+4) Create a pull request against the "development" branch.
 
 When contributing code, it's important to include a short summary of what the code does in your pull request so it can be reviewed quickly.
 
