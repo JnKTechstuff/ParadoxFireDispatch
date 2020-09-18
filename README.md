@@ -11,7 +11,9 @@ This is an original fire script developed by JnKTechstuff(Jake K #2217) with som
 This script was developed for Paradox Gaming. A public RP community co-founded by myself and E1Gamer.
 
 If you are looking for a server give ours a try:
+
 [Paradox Gaming Website](https://www.paradoxgaming.co/)
+
 [Paradox Gaming Discord](https://discord.gg/9eBtqEm)
 
 ## Using
