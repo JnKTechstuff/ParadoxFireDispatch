@@ -26,27 +26,32 @@ end)
 RegisterServerEvent('FireScript:PlayerJoined')
 AddEventHandler('FireScript:PlayerJoined', function()
     local _source = source
+    if Config.AdminCommand then
+        TriggerClientEvent('chat:addSuggestion', _source, '/startfire', 'Paradox Fire Dispatch: Start fire', {
+            { name='Number of flames', help='Number of flames to spawn (intensity)' },
+            { name='Radius of fire', help='Width of the fire (randomly will spawn fires in this width)' }
+        })
+    end
     if #Fires > 0 then
-        for k,v in pairs(Fires) do 
-            Wait(700)
-            TriggerClientEvent('FireScript:StartFire', _source, v.coords)
-        end
+        print('[^1Paradox Fire^7] FIRE SCRIPT PLAYER JOINED')
+        TriggerClientEvent('FireScript:StartFireClient', _source, Fires)
     end
 end)
 
 RegisterServerEvent('FireScript:SyncFlamesSv')
 AddEventHandler('FireScript:SyncFlamesSv', function(coords)
-    local x = coords.x
-    ---- Secondary checks based on fires on serverside -----
-    for k,v in pairs(Fires) do
-        if v.coords == coords then
-            v = nil
+    CreateThread(function()
+        ---- Secondary checks based on fires on serverside -----
+        for k,v in pairs(Fires) do
+            if v.coords == coords then
+                v = nil
+            end
         end
-    end
-    if #Fires < 3 then
-        TriggerEvent('FireScript:StopFire', coords)
-    end
-    TriggerClientEvent('FireScript:SyncFlames', -1, coords)
+        if #Fires < 3 then
+            TriggerEvent('FireScript:StopFire', coords)
+        end
+        TriggerClientEvent('FireScript:SyncFlames', -1, coords)
+    end)
 end)
 
 
