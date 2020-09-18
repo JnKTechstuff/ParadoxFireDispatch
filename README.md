@@ -15,7 +15,7 @@ If you are looking for a server give ours a try:
 
 ## Using
 
-Be warned that ParadoxFireDispatch is in BETA stages and is **not** ready for production use.
+Be warned that ParadoxFireDispatch is in BETA stages and may **not** be 100% stable.
 
 If you want to use job limits and other things you **must** either adapt the script for ESX or use [ExM](https://github.com/extendedmode/extendedmode)
 
