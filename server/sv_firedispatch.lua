@@ -80,15 +80,24 @@ function TriggerFireScript(sender, position, inensity, radius)
     if cooldown == false then -- Double check here in case multiple fires start at once
         cooldown = true
         TriggerEvent('FireScript:StartFire', sender, position, inensity, radius)
-        TriggerClientEvent('FireDispatch:FireAlarm', sender, position)
         if Config.Timeout ~= false then
             StartTimeout()
         end
     end
 end
 
-AddEventHandler('esx:JobCountReturn', function(cops, ems, tow, dispatch, fire)
-	fireonline = fire
+CreateThread(function()
+    while Config.JobCheck do
+        Wait(Config.Cooldown)
+        fireonline = 0
+        local xPlayers = ExM.GetPlayers()
+        for i=1, #xPlayers, 1 do
+            local xPlayer = ExM.GetPlayerFromId(xPlayers[i])
+            if xPlayer.job.name == Config.Job then
+                fireonline = fireonline + 1
+            end
+        end
+    end
 end)
       
 RegisterServerEvent('FireDispatch:Disable')
