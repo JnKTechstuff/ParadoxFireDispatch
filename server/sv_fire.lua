@@ -33,7 +33,6 @@ AddEventHandler('FireScript:PlayerJoined', function()
         })
     end
     if #Fires > 0 then
-        print('[^1Paradox Fire^7] FIRE SCRIPT PLAYER JOINED')
         TriggerClientEvent('FireScript:StartFireClient', _source, Fires)
     end
 end)
