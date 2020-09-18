@@ -2,7 +2,7 @@ Config = {}
 
 -- ## How many total individual flames are allowed ## --
 -- ## Default: 100  (WARNING: DO NOT GO ABOVE 200, you will probably crash) ## --
-Config.MaxFlames = 00
+Config.MaxFlames = 100
 
 -- ## Cooldown on fires (how long before another can start). Defined in minutes! ## --
 -- ## Default: 5 minutes ## --
