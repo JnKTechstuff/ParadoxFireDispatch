@@ -4,7 +4,7 @@ game 'gta5'
 author 'JnKTechstuff'
 title 'Paradox Fire Script'
 description 'Fire Script and Event Handler'
-version '1.0'
+version 'BETA 1.0'
 
 shared_script '@extendedmode/imports.lua'
 
