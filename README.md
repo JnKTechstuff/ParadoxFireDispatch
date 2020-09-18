@@ -17,7 +17,7 @@ Be warned that ParadoxFireDispatch is in ALPHA stages and is **not** ready for p
 
 If you want to use job limits and other things you **must** either adapt the script for ESX or use [ExM](https://github.com/extendedmode/extendedmode)
 
-If you are **not** using any of the job stuff **remove** this line in **fxmanifest.lua**:
+If you are **not** using any of the job stuff or a different framework **remove** this line in **fxmanifest.lua**:
 
 ```lua
 shared_script '@extendedmode/imports.lua'
@@ -41,6 +41,10 @@ shared_script '@extendedmode/imports.lua'
 - Dynamic fire spawning based on player events
 - No floating fires
 
+## Commands
+*if enabled in config*
+- `/startfire <number of flames> <radius of fire>`
+
 ## Requirements
 
 - A working brain and if you want jobs then Extendedmode (works out of the box) or some other framework
@@ -49,7 +53,7 @@ shared_script '@extendedmode/imports.lua'
 
 - If no random fires in `x` amount of time start a fire from a defined table of coords
 - Multiple fires
-- Fire spread
+- Fire spreading
 
 ## Contributing
 
