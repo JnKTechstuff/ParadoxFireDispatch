@@ -88,7 +88,6 @@ RegisterNetEvent("playerSpawned")
 AddEventHandler("playerSpawned", function()
     if not AlreadySpawned then
         AlreadySpawned = true
-        print('SPAWNING FIRES')
         TriggerServerEvent('FireScript:PlayerJoined')
     end
 end)
