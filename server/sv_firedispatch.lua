@@ -7,11 +7,6 @@ local timeouttimer = false
 -- ############# --
 
 if Config.AdminCommand then
-    TriggerClientEvent('chat:addSuggestion', -1, '/startfire', 'Paradox Fire Dispatch: Start fire', {
-        { name='Number of flames', help='Number of flames to spawn (intensity)' },
-        { name='Radius of fire', help='Width of the fire (randomly will spawn fires in this width)' }
-    })
-
     RegisterCommand('startfire', function(source, args, rawCommand)
         local player = source
         local ped = GetPlayerPed(player)
@@ -108,8 +103,11 @@ function StartCooldown() -- Cooldown between fires
     CreateThread(function()
         if cooldowntimer == false then -- This is another double check to not set multiple timers
             cooldowntimer = true
+            print('[^1Paradox Fire^7] FIRE SCRIPT COOLDOWN INITIATED')
             SetTimeout((Config.Cooldown * 60000), function()
+                print('[^1Paradox Fire^7] FIRE SCRIPT COOLDOWN ENDED | FIRES HAVE BEEN RE-ACTIVATED')
                 cooldown = false
+                cooldowntimer = false
             end)
         end
     end)
@@ -122,7 +120,8 @@ function StartTimeout() -- Fire timeout (safety in case somehow the fire can not
             SetTimeout((Config.Timeout * 60000), function()
                 if timeouttimer == true then
                     TriggerClientEvent('FireScript:FireTimeout', -1)
-                    print('FIRE HAS TIMED OUT')
+                    print('[^1Paradox Fire^7] FIRE HAS TIMED OUT')
+                    timeouttimer = false
                 end
             end)
         end
