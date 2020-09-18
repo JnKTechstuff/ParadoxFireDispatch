@@ -15,7 +15,7 @@ If you are looking for a server give ours a try:
 
 ## Using
 
-Be warned that ParadoxFireDispatch is in ALPHA stages and is **not** ready for production use.
+Be warned that ParadoxFireDispatch is in BETA stages and is **not** ready for production use.
 
 If you want to use job limits and other things you **must** either adapt the script for ESX or use [ExM](https://github.com/extendedmode/extendedmode)
 
@@ -32,7 +32,7 @@ shared_script '@extendedmode/imports.lua'
 - [Extendedmode Github](https://github.com/extendedmode/extendedmode)
 - [FiveM Native Reference](https://runtime.fivem.net/doc/reference.html)
 - [Albo1125's Fire Script](https://github.com/Albo1125/FireScript)
-- [FiveM Forum Post]() (Coming soon!)
+- [FiveM Forum Post](https://forum.cfx.re/t/standalone-exm-paradox-fire-dispatch/1621385)
 
 
 ## Features
