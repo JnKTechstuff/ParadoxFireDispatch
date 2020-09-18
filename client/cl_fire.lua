@@ -20,7 +20,7 @@ local FireRadius
 RegisterNetEvent('FireScript:StartFireClient')
 AddEventHandler('FireScript:StartFireClient', function(firetable) 
     StopFireInRange(firetable[1].coords, 100.0)
-    Wait(500) 
+    Wait(700) 
     for i=1, #firetable, 1 do
         Wait(0)
         print(firetable[i].coords)
@@ -31,7 +31,7 @@ AddEventHandler('FireScript:StartFireClient', function(firetable)
             FireArea = firetable[i].coords
             if i == #firetable then
                 -- prevent increase and decrease of PTFX at same time --
-                Wait(5000)
+                Wait(#firetable * 1000)
                 FireActive = true
             end 
         end
@@ -88,6 +88,7 @@ RegisterNetEvent("playerSpawned")
 AddEventHandler("playerSpawned", function()
     if not AlreadySpawned then
         AlreadySpawned = true
+        print('SPAWNING FIRES')
         TriggerServerEvent('FireScript:PlayerJoined')
     end
 end)
@@ -211,18 +212,20 @@ end
 
 --- Startup fire effect ---
 function StartUp(handle)
-    if handle ~= nil then
-        local size = 0.01
-        while size > 0 do
-            Citizen.Wait(100)
-            SetParticleFxLoopedScale(handle, size)
-            if size < 0.65 then
-                size = size + 0.005
-            else
-                break
+    CreateThread(function()
+        if handle ~= nil then
+            local size = 0.01
+            while size > 0 do
+                Citizen.Wait(50)
+                SetParticleFxLoopedScale(handle, size)
+                if size < 0.65 then
+                    size = size + 0.005
+                else
+                    break
+                end
             end
         end
-    end
+    end)
 end
 
 --- Remove a particle effect ---
