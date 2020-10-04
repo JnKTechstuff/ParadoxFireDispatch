@@ -256,7 +256,7 @@ end
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(1500)
-        if FireActive == true then
+        if #Fires > 0 then
             for k,v in pairs(Fires) do
                 local coords = v.coords -- Store this in case we need it in the statement below
                 if GetNumberOfFiresInRange(coords, 0.3) == 0 then
